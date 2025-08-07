@@ -17,7 +17,8 @@ function Secret() {
     const[Decryptmsg,Setdecryptmsg]=useState('')
   
     const encryptmessage=()=>{
-       axios.post(`http://localhost:8080/encryptmsg?msg=${msg}&password=${password}`)
+      axios.post(`https://locktalk-api.up.railway.app/encryptmsg?msg=${msg}&password=${password}`)
+
      
     
     .then((response)=>{
@@ -30,7 +31,8 @@ function Secret() {
     })
   }
   const decryptmsg=()=>{
-       axios.post(`http://localhost:8080/decryptmsg?secret=${Secretdecryptmsg}&password=${Passwordfordecrypt}`)
+       axios.post(`https://locktalk-api.up.railway.app/decryptmsg?secret=${Secretdecryptmsg}&password=${Passwordfordecrypt}`)
+
      
     
     .then((response)=>{
